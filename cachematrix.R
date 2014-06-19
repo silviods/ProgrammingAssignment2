@@ -1,17 +1,18 @@
-## Put comments here that give an overall description of what your
-## functions do
+## R Programming assignment 2
 
 ## SEE MY UNIT TEST IN THE END OF THIS CODE
 
-## Write a short comment describing this function
-## Objective: declare functions in a list, to:
-##      1 - set the value of the vector
-##      2 - get the value of the vector
+## Function objective: put functions in a list, to:
+##      1 - set the value of the matrix
+##      2 - get the value of the matrix
 ##      3 - set the value of the matrix inverse using solve
 ##      4 - get the value of the matrix inverse
 ## This returns a list containing the functions
 makeCacheMatrix <- function(x = matrix()) {
+    ## clear valiable
     m <- NULL
+    
+    ## saves input in a parent environment
     set <- function(y) {
         x <<- y
         m <<- NULL
@@ -21,16 +22,16 @@ makeCacheMatrix <- function(x = matrix()) {
     getinverse <- function() m
     
     myfunctionlist <- list(set = set, get = get,
-         setinverse = setinverse,
-         getinverse = getinverse)
+                            setinverse = setinverse,
+                            getinverse = getinverse)
     
     return(myfunctionlist)
 }
 
-## Write a short comment describing this function
-## Computes, caches and return matrix inverse
+
+## Function objective: Computes, caches and return matrix inverse
 cacheSolve <- function(x, ...) {
-    ## Return a matrix that is the inverse of 'x'
+    ## Return a matrix ls(that is the inverse of 'x'
     
     ## from the x closure (makeCacheMatrix), gets the inverse
     matrixinverse <- x$getinverse()
