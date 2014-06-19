@@ -48,9 +48,9 @@ cacheSolve <- function(x, ...) {
     ## calculates the inverse using solve
     matrixinverse <- solve(data, ...)
     
-    ## caches the matrix inverse, and returns the 
+    ## caches the matrix inverse, and returns it
     x$setinverse(matrixinverse)
-    matrixinverse
+    return(matrixinverse)
 }
 
 ## Unit Test (example)
